@@ -1,6 +1,7 @@
 import React from "react";
 import { StyleSheet, Text, View, Button, TextInput, FlatList } from "react-native";
 import Header from "./components/header";
+import { TodosItem } from "./components/todosItem";
 
 export default function App() {
   const[rodos, setTodos]=React.useState([
@@ -9,6 +10,10 @@ export default function App() {
     {text: "play on the switch", key: 3}
   ])
 
+    const pressHandler = (key) => {
+      setTodos(prevState => prevState.filter((todo) => todo.key !== key))
+    }
+
   return (
     <View style={styles.container}>
       <Header />
@@ -16,7 +21,7 @@ export default function App() {
         {/* todos form*/}
         <View style={styles.list}>
           <FlatList data={todos} renderItem={({item})=> (
-            <Text>{item.text}</Text>
+            <TodosItem item={item} pressHandler={pressHandler}></TodosItem>
           )}   />
         </View>
       </View>
