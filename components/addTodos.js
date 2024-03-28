@@ -1,5 +1,5 @@
-mport React from "react";
-import { StyleSheet, Text, Button, TextInput } from "react-native";
+import React from "react";
+import { StyleSheet, Text, View, Button, TextInput } from "react-native";
 
 export const AddTodos = ({submitHandler}) => {
 const [text, setText]=React.useState("");
@@ -19,10 +19,10 @@ return (
 
 const styles=StyleSheet.create({
 input: {
-    marbgginBottom: 10,
+    marginBottom: 10,
     paddingHorizontal: 8,
     paddingVertical: 6,
-    borderBottomWidth: 1,
+    borderBottomWidth: 5,
     borderBottomColor: "#ddd"
 }
 })

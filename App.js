@@ -5,7 +5,7 @@ import { TodosItem } from "./components/todosItem";
 import { AddTodos } from "./components/addTodos";
 
 export default function App() {
-  const[rodos, setTodos]=React.useState([
+  const[todos, setTodos]=React.useState([
     {text: "buy a coffee", key: "1"}, 
     {text: "create an app", key: "2"},
     {text: "play on the switch", key: "3"}
@@ -40,7 +40,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "green",
+    backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
   },
@@ -48,6 +48,7 @@ const styles = StyleSheet.create({
     padding: 40
   },
   list: {
-    marginTop: 20
+    marginTop: 20,
+    fontSize: 20
   }
 });

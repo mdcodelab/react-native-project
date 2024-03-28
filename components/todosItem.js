@@ -5,7 +5,7 @@ export const TodosItem = ({item, pressHandler}) => {
 
 return (
     <TouchableOpacity onPress={()=> pressHandler(item.key)}>
-        <Text style={styles.text}>{item.name}</Text>
+        <Text style={styles.text}>{item.text}</Text>
     </TouchableOpacity>
 )
 }
